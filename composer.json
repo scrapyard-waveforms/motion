@@ -1,36 +1,48 @@
 {
-  "name": "waveforms/motion",
-  "description": "The Waveforms motion actuator component.",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Angel Gonzalez",
-      "email": "angel@projectsaturnstudios.com"
-    }
-  ],
-  "homepage": "https://scrapyard-io.projectsaturnstudios.com",
-  "support": {
-    "issues": "https://github.com/ScrapyardIO/framework/issues",
-    "source": "https://github.com/ScrapyardIO/framework"
-  },
-  "require": {
-    "php": "^8.4|^8.5|^8.6",
-    "fabricate/actuation": "^0.6.0",
-    "fabricate/circuits": "^0.6.0",
-    "fabricate/nuts-and-bolts": "^0.6.0"
-  },
-  "minimum-stability": "dev",
-  "autoload": {
-    "psr-4": {
-      "ScrapyardIO\\Waveforms\\Motion\\": ""
-    }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "0.6.x-dev"
-    }
-  }
+    "name": "waveforms/motion",
+    "description": "The Waveforms Motion component (Accelerometer, Magnetometer).",
+    "type": "library",
+    "version": "0.7.0",
+    "keywords": ["framework", "scrapyard-io", "waveforms"],
+    "license": "MIT",
+    "homepage": "https://scrapyard-io.projectsaturnstudios.com/ecosystem/scrapyard-io/waveforms/0.7.x",
+    "support": {
+        "docs": "https://scrapyard-io.projectsaturnstudios.com/ecosystem/scrapyard-io/waveforms/0.7.x",
+        "source": "https://github.com/scrapyard-io/waveforms",
+        "issues": "https://github.com/scrapyard-io/waveforms/issues"
+    },
+    "authors": [
+        {
+            "name": "Angel Gonzalez",
+            "email": "angel@projectsaturnstudios.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4|^8.5|^8.6",
+        "scrapyard-io/gpio-framework": "^0.7.0",
+        "waveforms/contracts": "^0.7.0",
+        "waveforms/physical-devices": "^0.7.0"
+    },
+    "suggest": {
+        "scrapyard-io/tubes": "Required at runtime for Motion OLED / canvas demo sketches",
+        "scrapyard-io/ux": "Optional — UX Scene bind-over for *-canvas-demo slugs",
+        "scrapyard-io/waveforms": "Kitchen-sink metapackage that replaces waveforms/motion at the same version (^0.7)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Waveforms\\Motion\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.7.x-dev",
+            "dev-main": "0.7.x-dev",
+            "dev-0.7.x": "0.7.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
